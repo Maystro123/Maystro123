@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loading Animation</title>
+  <style>
+    body {
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .spinner {
+      width: 80px;
+      height: 80px;
+      border: 10px solid #3498db;
+      border-radius: 50%;
+      border-top: 10px solid transparent;
+      animation: spin 2s linear 3; /* Animation duration set to 3 */
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <b>Chargement en cours...</b>
+  <br>
+  <div class="spinner"></div>
+  <br>
+  <script>
+    const spinner = document.querySelector('.spinner');
+
+    spinner.addEventListener('animationend', () => {
+      alert("erreur vous utilisez une ancienne version d'Android pour plus d'infos contactez Roblox🤓");
+    });
+  </script>
+</body>
+
+</html>
